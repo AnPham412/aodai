@@ -15,7 +15,7 @@ class BrandController extends Controller
     public function brands()
     {
         $brands = Brand::orderBy('id', 'DESC')->paginate(10);
-        return view('admin.brand.brands', compact('brands'));
+        return view('admin.brand.index', compact('brands'));
     }
 
     public function add_brand()
